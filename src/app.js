@@ -5,16 +5,21 @@ const postRoute = require('./routes/post.routes')
 const path = require("path");
 const morgan = require('morgan');
 const session = require('express-session');
+const mongoStore = require('connect-mongo');
 const flash = require('connect-flash');
 const cookieParser = require('cookie-parser');
+const config = require('../src/config/config');
 
 const app = express();
 
-app.use(session({
-    secret : "secret-key",
+app.use(
+  session({
+    store: mongoStore.create({ mongoUrl: config.DB_CONNECTION_STRING }),
+    secret: "secret-key",
     resave: false,
-    saveUninitialized: true
-}))
+    saveUninitialized: true,
+  })
+);
 
 
 app.use(flash());
