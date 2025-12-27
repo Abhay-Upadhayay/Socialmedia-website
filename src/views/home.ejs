@@ -1,0 +1,28 @@
+<%- include('partial/header.ejs') %>
+
+<main>
+    <div class="container">
+         <% if(success && success.length > 0 ){ %>
+             <div id="toast">
+                <%= success  %>
+               </div>
+        <% } %>
+         <% if(error && error.length > 0 ){ %>
+             <div id="error-toast">
+                <%= error  %>
+               </div>
+        <% } %>
+
+        <div class="posts">
+
+            <%- include('partial/posts.ejs') %>
+
+        </div>
+
+
+        <%- include('partial/tools.ejs') %>
+
+    </div>
+</main>
+
+<%- include("partial/footer.ejs") %>

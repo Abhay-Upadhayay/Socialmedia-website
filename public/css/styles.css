@@ -1,0 +1,249 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+}
+
+
+main .container{
+    height: 100%;
+    width: 500px;
+    background-color: rgb(82, 82, 82);
+    border: 1px solid black;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .container .tools {
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+}
+
+main .container .tools a {
+    text-decoration: none;
+    color: black;
+}
+
+main .container .tools  i{
+    font-size: 2rem;
+}
+
+
+
+.login {
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.login form {
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 1em;
+    background-color: rgb(177, 177, 177);
+}
+
+.login form #error{
+    text-align: center;
+    color: red;
+}
+
+
+.login form input {
+    width: 100%;
+    font-size: 1.3em;
+    padding: 3px 7px;
+    border-radius: 5px;
+
+}
+
+.login form .btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.login form .btn button {
+    padding: 5px 8px;
+    font-size: large;
+    background-color: rgb(78, 79, 174);
+    border-radius: 5px;
+    color: white;
+}
+
+.login form h1 {
+    text-align: center;
+}
+
+#toast{
+    background-color: green;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+
+#error-toast{
+    background-color: rgb(164, 0, 0);
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+
+
+.posts {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.posts .post{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.posts .post .top{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 40px 10px;
+}
+
+
+.posts .post .top i{
+    font-size: xx-large;
+}
+
+
+.posts .post .top .profile{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.posts .post .top .profile img {
+    
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+}
+
+.posts .post .bottom{
+    width: 100%;
+
+}
+
+.posts .post .bottom img{
+    width: 100%;
+    border-radius: 4px;
+}
+
+.posts .post .bottom .post-tool{
+    font-size: xx-large;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+.posts .post .bottom .post-tool .tool{
+    display: flex;
+    gap: 15px;
+}
+
+.posts .post .bottom p{
+    padding: 10px 15px;
+}
+
+
+.userProfile{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.userProfile .profile{
+    display: flex;
+    gap: 20px;
+}
+
+.userProfile  img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.userProfile  a{
+    font-size: xx-large;
+    text-decoration: none;
+    color: rgb(164, 0, 0);
+}
+.userProfile  h2{
+    font-size: xx-large;
+}
+
+#total-posts{
+    text-align: center;
+    font-size: x-large;
+}
+
+#post-edit{
+    display: flex;
+    gap: 15px;
+}
+
+
+#post-edit a{
+    text-decoration: none;
+    color: black;
+}
+#post-edit a .ri-delete-bin-line{
+    color: rgb(164, 0, 0);
+}
+
+#caption{
+    height: 10rem;
+    width: 25rem;
+}
+
+#edit-profile{
+    padding: 7px 14px;
+    border-radius: 8px;
+    background-color: rgb(161, 161, 161);
+}

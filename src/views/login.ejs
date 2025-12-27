@@ -1,0 +1,36 @@
+<%- include('partial/header.ejs') %>
+
+    
+    <div class="login">
+        <% if (success && success.length > 0) { %>
+            <div id="toast">
+               <%= success %>
+            </div>
+            <%  } %>
+        <form action="/user/login" method="post">
+            <br>
+            <% if(error){  %>
+            <p id="error"><%= error %></p>
+            <% } %>
+            
+
+            <h1>Login Here</h1>
+            <br>
+            <label for="email">Email :</label>
+            <input id="email" type="email" name="email">
+            <br><br>
+
+
+            <label for="password">Password :</label>
+            <input id="password" type="password" name="password">
+            <br><br>
+
+            <div class="btn">
+                <button>Login</button>
+            </div>
+            <br>
+            <p>If you don't have an account? <a href="/user/register">Register here</a></p>
+        </form>
+    </div>
+
+<%- include('partial/footer.ejs') %>

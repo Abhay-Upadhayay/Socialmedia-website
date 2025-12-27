@@ -1,0 +1,19 @@
+<%- include("partial/header.ejs") %>
+<div class="login">
+    <form action="/post/createpost" enctype="multipart/form-data" method="post">
+            <% if(error){  %>
+            <p id="error"><%= error %></p>
+            <% } %>
+        <br>
+        <h1>create Post</h1>
+        <br>
+        <input  type="file" name="media" id="media">
+        <br>
+        <br>
+        <div class="btn">
+             <button>Post</button>
+           </div>
+    </form>
+</div>
+
+<%- include("partial/footer.ejs") %>

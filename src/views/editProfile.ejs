@@ -1,0 +1,36 @@
+<%- include('partial/header.ejs') %>
+
+
+    <div class="login">
+        <form action="/user/editProfile" enctype="multipart/form-data" method="post">
+            <br>
+            <% if(error){ %>
+                <p id="error">
+                    <%= error %>
+                </p>
+                <% } %>
+
+
+                    <h1>Edit Profile</h1>
+                    <br>
+                    <label for="media">
+                        <h3>Picture :</h3>
+                    </label>
+                    <input type="file" name="media" id="media">
+
+                    <br><br>
+                    <label for="username">
+                        <h3>Username :</h3>
+                    </label>
+                    <input type="text" name="username" id="username">
+
+                    <br><br>
+
+                    <div class="btn">
+                        <button type="submit">Update</button>
+                    </div>
+                    <br>
+        </form>
+    </div>
+
+    <%- include('partial/footer.ejs') %>

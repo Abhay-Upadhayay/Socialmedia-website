@@ -1,0 +1,28 @@
+<%- include('partial/header.ejs') %>
+
+
+    <div class="login">
+        <form action="/post/update/<%= post._id %>" method="post">
+            <br>
+            <% if(error){ %>
+                <p id="error">
+                    <%= error %>
+                </p>
+                <% } %>
+
+
+                    <h1>Update Caption</h1>
+                    <br>
+                    <textarea name="caption" id="caption" rows="5" cols="40"  >
+                        <%= post.caption %>
+                    </textarea>
+                    <br><br>
+
+                    <div class="btn">
+                        <button>Update</button>
+                    </div>
+                    <br>
+        </form>
+    </div>
+
+    <%- include('partial/footer.ejs') %>

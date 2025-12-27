@@ -1,0 +1,12 @@
+<div class="tools">
+    <a href="/"><i class="ri-home-line"></i></a>
+    <i class="ri-search-line"></i>
+    <a href="/post/createpost"><i class="ri-add-large-line"></i></a>
+    <i class="ri-send-plane-fill"></i>
+    <% if(user){ %>
+       <a href="/user/profile"><i class="ri-account-circle-fill"></i></a>
+    <% }else { %>
+        <a href="/user/login"><i class="ri-login-circle-fill"></i></a>
+    <% } %>
+
+</div>

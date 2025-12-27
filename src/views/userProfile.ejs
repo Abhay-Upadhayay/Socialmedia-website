@@ -1,0 +1,74 @@
+<%- include('partial/header.ejs') %>
+
+  <main>
+    <div class="container">
+      <% if(success && success.length> 0 ){ %>
+        <div id="toast">
+          <%= success %>
+        </div>
+        <% } %>
+          <% if(error && error.length> 0 ){ %>
+            <div id="error-toast">
+              <%= error %>
+            </div>
+            <% } %>
+      <div class="userProfile">
+        <div class="profile">
+          <img src="<%= user.avatar %>" alt="Profile">
+          <h2>
+            <%= user.username %>
+          </h2>
+          <a href="/user/editProfile"><button id="edit-profile">Edit Profile</button></a>
+        </div>
+        <a href="/user/logout"><i class="ri-logout-box-line"></i></a>
+      </div>
+      
+
+
+      <% const postsArr=[] %>
+        <% for (const post of userPosts) { %>
+          <% postsArr.unshift(post); %>
+            <% }%>
+
+
+
+
+      <h3 id="total-posts">POSTS(<%= userPosts.length %>)</h3>
+      <div class="posts">
+        <% for (const post of postsArr) { %>
+          <div class="post">
+            <div class="top">
+              <div class="profile">
+                <img src="<%= post.author.avatar %>" alt="Profile">
+                <h2>
+                  <%= post.author.username %>
+                </h2>
+              </div>
+              <div id="post-edit">
+                <a href="/post/delete/<%= post._id %>"><i class="ri-delete-bin-line"></i></a>
+                <a href="/post/update/<%= post._id %>"><i class="ri-edit-line"></i></a>
+              </div>
+            </div>
+            <div class="bottom">
+              <img src="<%= post.media %>" alt="">
+              <div class="post-tool">
+                <div class="tool">
+                  <i class="ri-heart-line"></i>
+                  <i class="ri-chat-3-line"></i>
+                  <i class="ri-send-plane-fill"></i>
+                </div>
+                <i class="ri-bookmark-line"></i>
+              </div>
+              <p>
+                <%= post.caption %>
+              </p>
+            </div>
+          </div>
+          <% } %>
+      </div>
+
+      <%- include('partial/tools.ejs') %>
+    </div>
+  </main>
+
+  <%- include('partial/footer.ejs') %>
